@@ -10,7 +10,7 @@ Join a **claude-duet** interview session as the candidate — from any machine w
 
 ```bash
 # 1. Get this repo
-git clone https://github.com/OWNER/claude-duet-join.git
+git clone https://github.com/togethercomputer/claude-duet-join.git
 cd claude-duet-join
 
 # 2. Build the client image (once, a few minutes)
@@ -40,7 +40,7 @@ To reconnect after a network drop, just re-run the same `docker run` command.
 ```bash
 sudo apt-get update && sudo apt-get install -y git curl
 curl -fsSL https://get.docker.com | sudo sh
-git clone https://github.com/OWNER/claude-duet-join.git && cd claude-duet-join
+git clone https://github.com/togethercomputer/claude-duet-join.git && cd claude-duet-join
 sudo docker build -t claude-duet-join .
 sudo docker run -it --rm claude-duet-join <session-code> --password <pw> --url <ws-url>
 ```
