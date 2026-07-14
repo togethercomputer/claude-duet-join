@@ -16,8 +16,8 @@ cd claude-duet-join
 # 2. Build the client image (once, a few minutes)
 docker build -t claude-duet-join .
 
-# 3. Join — using the three values from the host's screen
-docker run -it --rm claude-duet-join <session-code> --password <pw> --url <ws-url>
+# 3. Join — put YOUR name so the host sees you by name (not "guest")
+docker run -it --rm claude-duet-join <session-code> --password <pw> --url <ws-url> --name "Your Name"
 ```
 
 `<session-code>`, `<pw>`, and `<ws-url>` come from the **host's pinned banner**:
@@ -42,7 +42,7 @@ sudo apt-get update && sudo apt-get install -y git curl
 curl -fsSL https://get.docker.com | sudo sh
 git clone https://github.com/togethercomputer/claude-duet-join.git && cd claude-duet-join
 sudo docker build -t claude-duet-join .
-sudo docker run -it --rm claude-duet-join <session-code> --password <pw> --url <ws-url>
+sudo docker run -it --rm claude-duet-join <session-code> --password <pw> --url <ws-url> --name "Your Name"
 ```
 
 (Non-Debian distros: swap the package manager. To drop `sudo`, run `sudo usermod -aG docker $USER` once and start a new shell.)
